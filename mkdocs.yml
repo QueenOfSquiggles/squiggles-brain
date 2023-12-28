@@ -1,0 +1,36 @@
+site_name: Squiggles Brain
+
+#nav:
+# Globally relevant
+#    - Home: index.md
+#    - About: about.md
+# Categories and subcategories
+#    - Godot:
+#        - Main: 'godot/index.md'
+#        - Rust: 'godot/godot-rust/index.md'
+
+theme:
+    name: readthedocs
+    highlightjs: true
+    hljs_style: panda-syntax-light
+    hljs_languages:
+        - rust
+        - yaml
+        - gdscript
+    shortcuts:
+        help: 191    # ?
+        next: 78     # n
+        previous: 80 # p
+        search: 83   # s
+
+
+repo_url: https://github.com/
+
+site_description: "A general purpose, technically leaning knowledge base"
+site_author: "Queen of Squiggles"
+
+markdown_extensions:
+    - toc:
+        permalink: "#"
+    - wikilinks
+    - fenced_code
