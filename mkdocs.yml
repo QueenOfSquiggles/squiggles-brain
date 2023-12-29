@@ -1,5 +1,6 @@
 site_name: Squiggles Brain
 
+# Because of our plugins, the navigator is automatically generated from the file tree, which is most logical for both editing and finding articles!
 #nav:
 # Globally relevant
 #    - Home: index.md
@@ -10,27 +11,34 @@ site_name: Squiggles Brain
 #        - Rust: 'godot/godot-rust/index.md'
 
 theme:
-    name: readthedocs
-    highlightjs: true
-    hljs_style: panda-syntax-light
-    hljs_languages:
-        - rust
-        - yaml
-        - gdscript
-    shortcuts:
-        help: 191    # ?
-        next: 78     # n
-        previous: 80 # p
-        search: 83   # s
+    name: material
+    palette:
+        - scheme: default
+          media: "(prefers-color-scheme: light)"
+          toggle:
+            icon: material/weather-night
+            name: Switch to dark mode
+        - scheme: slate
+          media: "(prefers-color-scheme: dark)"
+          toggle:
+            icon: material/weather-sunny
+            name: Switch to light mode
 
-
-repo_url: https://github.com/
+repo_url: https://github.com/QueenOfSquiggles/squiggles-brain
 
 site_description: "A general purpose, technically leaning knowledge base"
 site_author: "Queen of Squiggles"
+
+plugins:
+    - search
+    - section-index
+    - git-revision-date-localized
 
 markdown_extensions:
     - toc:
         permalink: "#"
     - wikilinks
     - fenced_code
+    - pymdownx.highlight:
+        use_pygments: true
+    - pymdownx.superfences
