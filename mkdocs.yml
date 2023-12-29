@@ -23,8 +23,14 @@ theme:
           toggle:
             icon: material/weather-sunny
             name: Switch to light mode
+    features:
+        - content.action.edit
+    icon:
+        edit: material/pencil
 
 repo_url: https://github.com/QueenOfSquiggles/squiggles-brain
+edit_uri: edit/main/docs
+
 
 site_description: "A general purpose, technically leaning knowledge base"
 site_author: "Queen of Squiggles"
@@ -32,7 +38,9 @@ site_author: "Queen of Squiggles"
 plugins:
     - search
     - section-index
-    - git-revision-date-localized
+    - git-revision-date-localized:
+        enable_creation_date: true
+        type: datetime
 
 markdown_extensions:
     - toc:
